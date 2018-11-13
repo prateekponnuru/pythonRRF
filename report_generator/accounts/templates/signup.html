@@ -1,0 +1,20 @@
+<!-- templates/home.html -->
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    <div class="form-group">
+      <input placeholder="Email" {{ form.username }}
+    </div>
+    <div class="form-group">
+      <input placeholder="Password" {{ form.password1 }}
+    </div>
+    <div class="form-group">
+        <input placeholder="Confirm Password" {{ form.password2 }}
+    </div>
+    <button type="submit" class="btn btn-default">Next</button>
+</form>
+{% endblock %}
